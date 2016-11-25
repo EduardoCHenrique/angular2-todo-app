@@ -1,2 +1,2 @@
-export {environment} from './environment';
-export {Angular2TodoAppAppComponent} from './angular2-todo-app.component';
+export * from './environment';
+export * from './todo-app/todo-app.component';

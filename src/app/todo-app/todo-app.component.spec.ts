@@ -10,11 +10,13 @@ import { ComponentFixture, TestComponentBuilder } from '@angular/compiler/testin
 import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { TodoAppComponent } from './todo-app.component';
+import {TodoService} from '../todo.service';
+
 
 describe('Component: TodoApp', () => {
   let builder: TestComponentBuilder;
 
-  beforeEachProviders(() => [TodoAppComponent]);
+  beforeEachProviders(() => [TodoAppComponent, TodoService]);
   beforeEach(inject([TestComponentBuilder], function (tcb: TestComponentBuilder) {
     builder = tcb;
   }));
@@ -43,4 +45,3 @@ describe('Component: TodoApp', () => {
 })
 class TodoAppComponentTestController {
 }
-
